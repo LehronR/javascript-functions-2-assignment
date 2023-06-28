@@ -65,3 +65,16 @@ const books = [
 ];
 
 
+const booksByGenre = (books, genre) => {
+  let filteredBooks =  books.filter((book) => {
+    return book.genre.toLowerCase() === genre.toLowerCase();
+  });
+  return filteredBooks;
+}
+
+let romanceBooks = booksByGenre(books, "ROMance");
+let mysteryBooks = booksByGenre(books, "Mystery");
+let scifiBooks = booksByGenre(books, "sci-fi");
+console.log(romanceBooks);
+console.log(mysteryBooks);
+console.log(scifiBooks);
