@@ -66,10 +66,8 @@ const books = [
 
 
 const booksByGenre = (books, genre) => {
-  let filteredBooks =  books.filter((book) => {
-    return book.genre.toLowerCase() === genre.toLowerCase();
-  });
-  return filteredBooks;
+  return books.filter((book) => {
+    return book.genre.toLowerCase() === genre.toLowerCase();});
 }
 
 let romanceBooks = booksByGenre(books, "ROMance");
